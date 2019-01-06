@@ -2,7 +2,7 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
 	IN p_name VARCHAR(20),
     IN p_username VARCHAR(20),
-    IN p_password VARCHAR(66)
+    IN p_password VARCHAR(93)
 )
 BEGIN
 	if ( select exists (select 1 from tbl_user where user_username = p_username) ) THEN
